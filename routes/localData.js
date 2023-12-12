@@ -11,4 +11,6 @@ router.post("/test", local.testPostController);
 router.put("/test", local.testPutController);
 router.delete("/test", local.testDeleteController);
 
+router.get("/random", local.getRandomQuoteController);
+
 export default router;

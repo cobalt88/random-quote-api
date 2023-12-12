@@ -37,7 +37,9 @@ export const testDeleteController = async (req, res) => {
 
 export const getRandomQuoteController = async (req, res) => {
 	try {
-		const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+		console.log(quotes.default[0]);
+		const randomQuote = quotes.default[Math.floor(Math.random() * quotes.default.length)];
+		console.log(randomQuote);
 		res.status(200).json(randomQuote);
 	} catch (err) {
 		res.status(500).json(`Error encountered in getRandomQuoteController route: ${err}`);
